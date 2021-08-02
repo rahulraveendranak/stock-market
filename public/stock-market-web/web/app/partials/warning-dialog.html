@@ -1,0 +1,66 @@
+<style>
+    .modal {
+      text-align: center;
+      padding: 0!important;
+    }
+
+    .modal::before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -4px;
+    }
+
+    .modal-dialog {
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th, td {
+            width:100px;
+          }
+    .modal .modal-dialog .modal-content .modal-body {
+        padding: 10px 26px;
+    }
+    #closeButton {
+        cursor: pointer;
+        position: absolute;
+        right: -18px;
+        top: -22px;
+        font-size: 32px;
+        color: #e73534;
+    }
+    .text-info {
+        color: #1899db !important;
+    }
+</style>
+
+<div class="modal-header" ng-controller="PartialController"> 
+    <h4> 
+        The Idle mode is activated,  
+        because you are idle for far too long. 
+        <span class="text-primary text-bold">As a result, you are going to be 
+          logout after in a few moments. </span>
+  </h4> 
+</div> 
+<div idle-countdown="countdown" 
+     ng-init="countdown=5" class="modal-body"> 
+       
+    <!-- <progressbar max="5" 
+                 value="5"
+                 animate="false" 
+                 class="progress-striped active"> 
+                     DO SOMETHING FAST! You are 
+                     getting logged out in {{countdown}} second(s). 
+   </progressbar>  -->
+
+   <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+        aria-valuenow="{{countdown}}" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+      
+    </div>
+</div>
+
+</div> 

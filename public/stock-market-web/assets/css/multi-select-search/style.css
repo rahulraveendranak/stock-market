@@ -1,0 +1,13 @@
+.multiselect-parent{
+    width: 100%;
+}
+.multiselect-parent ul{
+    width: 100%;
+}
+
+.multiselect-parent ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    margin-left: 10px;
+}

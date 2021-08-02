@@ -1,0 +1,302 @@
+body {
+    font-family: "SFProText", sans-serif;
+}
+
+.box h2 {
+    color: #e04307;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.box h2 span {
+    color: #1899DB;
+}
+
+.box label {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.box .btn {
+    background-color: #e04307;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar.horizontal-layout .nav-bottom .page-navigation > .nav-item {
+    width: unset !important;
+    margin: 0 auto !important;
+}
+
+.btn-success{
+  background-color:#1899DB !important;
+  border-color:#1899DB !important;
+}
+
+.btn-success:hover{
+    background-color:#0c85c3!important;
+    border-color:#0c85c3 !important;
+}
+
+/* input::placeholder{
+  background-color:#d3cde4 !important; 
+} */
+
+.fade.in {
+    opacity: 1;
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+#validate
+{
+    font-size: 11px;
+    color: red;
+}
+
+#required
+{
+    font-size: 15px;
+    color: red;
+    margin: 5px;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    line-height: 20px;
+    padding-top: 5px;
+}
+
+/* Create a custom checkbox */
+.containercheck .checkbox{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid rgb(37, 44, 70);
+    cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.containercheck:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containercheck input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.containercheck input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.containercheck .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#main-heading{
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(16, 16, 16);
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 32px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+div#_dropdown {
+    width: 100%;
+    font-size: 13px;
+}
+
+/* .form-group, .multi-row span, textarea {
+    display: flex!important;
+} */
+
+/* form-group */
+
+.form-group-edited{
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.form-group-edited label{
+    font-size: 0.875rem;
+    line-height: 20px;
+    padding-top: 5px;
+    vertical-align: top;
+}
+#vendors_dropdown{
+    width: 100%;
+    font-size: 13px;
+}
+div#vendorsSearch_dropdown {
+    width: 100%;
+    font-size: 13px;
+}
+div#programs_dropdown {
+    width: 100%;
+    font-size: 13px;
+}
+
+.text-caps{
+    text-transform: capitalize;
+}
+
+.export-btn{
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:focus, a:visited{
+    text-decoration: none;
+}
+
+.export-btn:focus, .export-btn:visited{
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+}
+
+.export-btn:hover{
+    background-color: #328a46;
+    color: #fff;
+    text-decoration: none;
+}
+.angucomplete-dropdown {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.dropdown-menu-ar{
+    margin-left: -85px;
+}
+
+.dropdown-menu-eng{
+    margin-left: -30px;
+}
+
+.cellContainer {
+    width: 5%;
+    float: left;
+}
+
+.cellContainer1 {
+    width: 25%;
+    float: left;
+}
+
+.tab-active {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #fff !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tab-active:focus,
+.tab-active:visited {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #fff !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tab-active:hover {
+    font-weight: bold;
+    background-color: #fff !important;
+    border: 1px solid #fff !important;
+    color: #000 !important;
+    cursor: default;
+}
+
+.company-details{
+    border: 1px solid #dee2e6;
+    padding: 2%;
+    margin: 2%;
+}
+
+.dropzone {
+    border: 2px dashed #bbb;
+    border-radius: 5px;
+    padding: 25px;
+    text-align: center;
+    font: 20pt bold;
+    color: #bbb;
+    margin-bottom: 20px;
+    width: 30%;
+    min-height: 1%;
+}
+
+a.main-anchors {
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sub-title{
+   font-size: 26px;
+   font-weight: 600;
+
+}
+
+.main-title{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.para{
+    font-size: 24px;
+    font-weight: 400;
+
+}
+
+.red{
+    color: red;
+    font-weight: 600;
+}
+
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="stock-market">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Stock Market</title>
+
+    <!-- Stylesheet for loader -->
+    <link rel="stylesheet" type="text/css" href="../css/loader.css">
+    <!-- <link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css'> -->
+    <link rel='stylesheet' href='bower_components/auto-complete/angucomplete-alt.css'>
+    <link rel="stylesheet" href="bower_components/angular-google-places-autocomplete/src/autocomplete.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <!-- Angular Date picker -->
+    <link rel="stylesheet" type="text/css" href="bower_components/date-picker/angular-datepicker.css">
+
+    <!-- Datetime picker -->
+    <link rel="stylesheet" href="bower_components/datetime-picker/angularjs-datetime-picker.css" />
+
+    <!-- new styles -->
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <!-- <link rel="stylesheet" href="../assets/vendors/flag-icon-css/css/flag-icon.min.css"> -->
+    <!-- <link rel="stylesheet" href="../assets/vendors/ti-icons/css/themify-icons.css"> -->
+    <!-- <link rel="stylesheet" href="../assets/vendors/typicons/typicons.css"> -->
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- <link rel="stylesheet" href="../assets/vendors/jquery-bar-rating/css-stars.css"> -->
+    <link rel="stylesheet" href="../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+
+    <!-- Font Awesome CSS -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- End Plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../assets/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../assets/css/login/style.css">
+    <link rel="stylesheet" href="../assets/css/home/style.css">
+    <link rel="stylesheet" href="../assets/css/multi-select-search/style.css">
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    
+</head>
+
+<body>
+
+    <div class="container-scroller">
+
+        <div id="page-wrapper" ng-class="logRegClass" dir={{orientation}}>
+            <!-- header -->
+            <ng-include ng-if="showHeaderFooter" src="'app/partials/header.html'"></ng-include>
+
+            <div ng-view>
+                <!-- Main Contents -->
+            </div>
+
+            <!-- footer -->
+            <ng-include ng-if="showHeaderFooter" src="'app/partials/footer.html'"></ng-include>
+        </div>
+
+    </div>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- js for header -->
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+
+    <!-- updated cdn angular js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-animate.min.js"></script>
+
+    <!-- <script type="text/javascript" src="bower_components/angular/angular.js"></script> -->
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="bower_components/angular-md5/angular-md5.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!-- ui mask used for emirate card hyphen generator -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.6.8/mask.min.js"></script>
+
+    <!-- Angular datepicker -->
+    <script type="text/javascript" src="bower_components/date-picker/angular-datepicker.js"></script>
+
+    <!-- datetime picker -->
+    <script type="text/javascript" src="bower_components/datetime-picker/angularjs-datetime-picker.min.js"></script>
+
+    <!-- Chart Js -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js" type="text/javascript"></script> -->
+    <script src="bower_components/angular-chart-js/Chart.min.js"></script>
+    <script src="bower_components/angular-chart-js/angular-chart.min.js"></script>
+
+    <script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
+    <script src="bower_components/ng-file-upload-shim/ng-file-upload.min.js"></script>
+
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-file-saver/dist/angular-file-saver.bundle.js"></script>
+
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ng-idle/1.3.2/angular-idle.js"></script>
+
+    <!-- ANGULAR TEXT EDITOR -->
+    <script src='bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+    <!-- <script src='bower_components/textAngular/dist/textAngular-sanitize.min.js'></script> -->
+    <script type="text/javascript" src='bower_components/auto-complete/angucomplete-alt.js'></script>
+    <!-- <script src='bower_components/textAngular/dist/textAngular.min.js'></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular-sanitize.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular.min.js'></script>
+
+    <!-- <script src="bower_components/file-saver.js/file-saver.js"></script> -->
+
+    <script type="text/javascript" src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+
+    
+    <script src="bower_components/angular-google-places-autocomplete/src/autocomplete.js"></script>
+   
+    <script type="text/javascript" src="bower_components/angularjs-dropdown-multiselect/angularjs-dropdown-multiselect.min.js"></script>
+    <!-- Moment date and time picker -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+    <script src="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.js"></script>
+    <link href="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.css" rel="stylesheet">
+
+    <!-- form builder -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Required for formbuilder -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://formbuilder.online/assets/js/form-builder.min.js"></script>
+    <script src="https://formbuilder.online/assets/js/form-render.min.js"></script>
+
+    <!-- common -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/APIservices.js"></script>
+    <script type="text/javascript" src="app/permission.js"></script>
+    <script type="text/javascript" src="app/dropzone.js"></script>
+    <script type="text/javascript" src="app/checklistmodel.js"></script>
+    <script type="text/javascript" src="app/error-src.js"></script>
+
+    <!-- Auth modules -->
+    <script type="text/javascript" src="app/modules/auth/controllers.js"></script>
+    <script type="text/javascript" src="app/modules/auth/services.js"></script>
+    <script type="text/javascript" src="app/partials/controller.js"></script>
+
+    <!-- main modules -->
+    <script type="text/javascript" src="app/modules/dashboard/controller.js"></script>
+
+    
+
+   
+    <script type="text/javascript" src="https://cdn.rawgit.com/AlphaGit/ng-pattern-restrict/master/src/ng-pattern-restrict.min.js"></script>
+    <script type="text/javascript" src="app/onlynumberandnumeric.js"></script>
+</body>
+
+
+</html>

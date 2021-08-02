@@ -1,0 +1,110 @@
+<!-- mobile -->
+<section class="d-block d-sm-none">
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        .navbar.horizontal-layout .nav-bottom .page-navigation>.nav-item .submenu ul li a:hover {
+            background: none !important;
+            color: #e04307 !important;
+        }
+    </style>
+
+    <header class="nav-top">
+        <a href="#!/dashboard"><img class="w-50 mt-2" src="../assets/images/logo.jpeg" height="100" width="100"></a>
+        <span class="hamburger material-icons" id="ham"> <button class="navbar-toggler position-absolute" type="button"
+                data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="navbar-togg mdi mdi-menu"></i>
+            </button></span>
+    </header>
+
+    <nav class="nav-drill shadow">
+        <ul class="nav-items nav-level-1 pl-0">
+            <li class="nav-item">
+                <a href="#!/dashboard" class="nav-link">
+                    <i class="link-icon mdi mdi-airplay"></i>
+                    <span class="menu-title">Dashboard</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</section>
+
+<div ng-controller="PartialController">
+    <nav class="navbar horizontal-layout col-lg-12 col-12 p-0 d-none d-sm-block">
+        <div class="container d-flex flex-row nav-top">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-top">
+                
+                    <h1><strong>Stocks</strong></h1>
+                    
+                
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center">
+              
+                <ul class="navbar-nav ml-auto">
+    
+                    <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                        <a style="cursor: pointer;" class="nav-link dropdown-toggle" id="UserDropdown" data-toggle="dropdown" aria-expanded="false">
+                            <div class="wrapper d-flex flex-column">
+                                <span class="profile-text">User</span>
+                               
+                            </div>
+                            <div class="display-avatar bg-inverse-primary " style="cursor: pointer;">
+                                <i style="width: 13px;" class="link-icon mdi mdi-account-circle"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                
+                            </div>
+            
+                           
+                           
+                            <a href="#!/logout" class="dropdown-item">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        
+    </nav>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.dropdown-submenu a.test').on("click", function(e) {
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+</script>
+
+<script>
+    // console.clear()
+
+    const navExpand = [].slice.call(document.querySelectorAll('.nav-expand'))
+    const backLink = `<li class="">
+<a style="color:#e04307" class="pr-2 float-right nav-back-link" href="javascript:;">
+  <i class=" mdi mdi-keyboard-backspace"></i>
+</a>
+</li>`
+
+    navExpand.forEach(item => {
+        item.querySelector('.nav-expand-content').insertAdjacentHTML('afterbegin', backLink)
+        item.querySelector('.nav-link').addEventListener('click', () => item.classList.add('active'))
+        item.querySelector('.nav-back-link').addEventListener('click', () => item.classList.remove('active'))
+    })
+
+
+    // ---------------------------------------
+    // not-so-important stuff starts here
+
+    const ham = document.getElementById('ham')
+    ham.addEventListener('click', function() {
+        document.body.classList.toggle('nav-is-toggled')
+    })
+</script>

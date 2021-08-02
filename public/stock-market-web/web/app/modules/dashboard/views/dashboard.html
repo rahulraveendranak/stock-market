@@ -1,0 +1,119 @@
+<!-- Add Bonus form-->
+
+    <!-- Loader -->
+    <div data-ng-show="showLoader" class="showLoader">
+        <div class="loader"></div>
+    </div>
+
+    <div data-ng-show="!showLoader">
+
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel container pt-xl-0 pt-3">
+
+                <div class="content-wrapper">
+
+                    <!-- row begins -->
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 d-flex align-items-stretch">
+                            <div class="row flex-grow">
+                                <div class="col-12">
+                                    <div class="alert alert-{{messageStatusError}}" ng-show="errormsg" ng-bind-html="errormsg"></div>
+                                    <div class="alert alert-{{messageStatusOne}}" ng-show="message" ng-bind-html="message"></div>
+                                    <div class="alert alert-{{messageStatus}}" ng-show="messagegroups">
+                                        <div ng-repeat="messageGroup in messagegroups">
+                                            <!-- {{message}} -->
+                                            <div ng-bind-html="messageGroup"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 grid-margin">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <h4 class="text-center main-title"><b>The easiest way to buy and sell stocks.</b></h4>
+                                                    <p class="text-center para">Stock analysis and screening tool for investors in India</p>
+
+                                                </div>
+                        
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <form class="forms-sample" enctype="multipart/form-data" novalidate  name="form">
+
+                                                <div class="form-group-edited row">
+                                                    <label style="font-size: 14px;" class="col-md-2" for="date_of_joining"></label>
+                                                    <div class="col-md-8">
+                                                        
+                                                        <div angucomplete-alt id="" placeholder="Search Companies by Name" maxlength="50"
+                                                        ng-model="company_profile_id" pause="100" selected-object="selectedCompany"
+                                                        local-data="companies" description-field="employee_id"
+                                                         match-class="highlight" search-fields="name" title-field="name"
+                                                            minlength="1" input-class="form-control form-control-small"
+                                                            ng-keyup="checkIfInputHasValue(selected-object)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="company-details" ng-hide="!showCompanyDetails">
+                                                    <!-- <div class="row">
+                                                        <label style="font-size: 14px;" class="col-md-7" for="date_of_joining">{{company_profile.name}}</label>
+                                                    </div> -->
+                                                    <label for=""><span class="sub-title">{{company_profile.name}}</span></label>
+                                                    <table class="table table-borderless">
+                                                        <thead>
+                                                          <tr>
+                                                            <th></th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>Market Cap</td>
+                                                            <td><span class="red">₹ {{company_profile.market_cap}}</span></td>
+                                                            <td>Dividend Yield</td>
+                                                            <td><span class="red">{{company_profile.dividend_yield}}%</span></td>
+                                                            <td>Debt Equity</td>
+                                                            <td><span class="red">{{company_profile.debt_to_equity}}%</span></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Current Price</td>
+                                                            <td><span class="red">₹ {{company_profile.current_market_price}}</span></td>
+                                                            <td>ROCE</td>
+                                                            <td><span class="red">{{company_profile.roce_percentage}}%</span></td>
+                                                            <td>Eps</td>
+                                                            <td><span class="red">₹ {{company_profile.eps}}</span></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Stock P/E</td>
+                                                            <td><span class="red">{{company_profile.stock_p_e}}%</span></td>
+                                                            <td>ROE</td>
+                                                            <td><span class="red">{{company_profile.roe_previous_annum}}%</span></td>
+                                                            <td>Reserves</td>
+                                                            <td><span class="red">₹ {{company_profile.reserves}}</span></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Dedt</td>
+                                                            <td><span class="red">₹ {{company_profile.dedt}}</span></td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+ 
+                                                </div>
+                                    
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- main-panel ends -->
+        </div>
+
+    </div>
