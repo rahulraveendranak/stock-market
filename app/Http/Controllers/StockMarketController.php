@@ -10,7 +10,7 @@ class StockMarketController extends ApiBaseController
 {
     public function allStockMarketDetails()
     {
-        $employees = StockMarket::get();
-        return $this->sendOk($employees, 'Employees fetched Successfully', '200');
+        $company = StockMarket::get();
+        return $this->sendOk($company, 'Company fetched Successfully', '200');
     }
 }
